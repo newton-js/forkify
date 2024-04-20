@@ -126,9 +126,6 @@ const controlUpload = async function (newr) {
   }
 };
 
-const newFeature = function () {
-  console.log('welcome to the application');
-};
 
 const init = function () {
   addRecipeView.addHandlerUpload(controlUpload);
