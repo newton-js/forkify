@@ -99,31 +99,35 @@ const controlBookmarks = function () {
 const controlUpload = async function (newr) {
   try {
     // show loading spinner
-    addRecipeView.renderSpinner()
+    addRecipeView.renderSpinner();
     // upload the new recipe data
     await model.uploadRecipe(newr);
     console.log(model.state.recipe);
 
     // Render the new recipe
     recipeView.render(model.state.recipe);
-   
+
     // success message
-    addRecipeView.renderMessage(); 
+    addRecipeView.renderMessage();
 
     // Render bookmark view
-    bookmarkView.render(model.state.bookmarks)
+    bookmarkView.render(model.state.bookmarks);
 
     // change ID in URL
-    window.history.pushState(null, "", `#${model.state.recipe.id}`)
+    window.history.pushState(null, '', `#${model.state.recipe.id}`);
 
     //close form window
-    setTimeout(function(){
-      addRecipeView.toggleWindow()
-    },MODAL_CLOSE_SEC * 1000)
+    setTimeout(function () {
+      addRecipeView.toggleWindow();
+    }, MODAL_CLOSE_SEC * 1000);
   } catch (err) {
     console.error('upload error', err);
     addRecipeView.renderError(err.message);
   }
+};
+
+const newFeature = function () {
+  console.log('welcome to the application');
 };
 
 const init = function () {
@@ -134,8 +138,7 @@ const init = function () {
   recipeView.addHandlerAddBookmark(controlAddBookmarks);
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
-  console.log('Welcome!');
-  alert('hacked')
+  newFeature()
 };
 
 init();
