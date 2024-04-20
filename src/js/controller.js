@@ -134,7 +134,8 @@ const init = function () {
   recipeView.addHandlerAddBookmark(controlAddBookmarks);
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
-  console.log('Welcome!')
+  console.log('Welcome!');
+  alert('hacked')
 };
 
 init();
