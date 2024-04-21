@@ -126,6 +126,10 @@ const controlUpload = async function (newr) {
   }
 };
 
+const frac = function (){
+  console.log(`<div class="recipe__quantity">${ing.quantity ? new Fraction(ing.quantity) : ''} </div>`)
+}
+
 
 const init = function () {
   addRecipeView.addHandlerUpload(controlUpload);
