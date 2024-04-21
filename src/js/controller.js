@@ -135,6 +135,7 @@ const init = function () {
   recipeView.addHandlerAddBookmark(controlAddBookmarks);
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
+  console.log('welcome to forkify')
 };
 
 init();
